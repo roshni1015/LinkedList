@@ -79,6 +79,18 @@ namespace LinkedList
                 }
             }
         }
+        public void  DeleteFirst(M data)
+        {
+            Node<M> tempnode = head;
+            if (head != null)
+            {
+                tempnode = head;
+                head = head.next;
+                tempnode = null;
+            }
+            count--;
+
+        }
 
 
         public void display()
