@@ -105,6 +105,43 @@ namespace LinkedList
                 second_last = second_last.next;
             second_last.next = null;
         }
+        public bool Search(int searchposition)
+        {
+            Node<M> temp = head;
+            int i = 0;
+            bool status = false;
+            int found = 0;
+            if (head == null)
+            {
+                Console.WriteLine("List Underflow");
+            }
+            else
+            {
+                while (temp != null)
+                {
+                    i++;
+                    if (temp.data.Equals(searchposition))
+                    {
+                        found++;
+                        break;
+                    }
+                    temp = temp.next;
+
+                }
+                if (found == 1)
+                {
+                    status = true;
+                    Console.WriteLine("Searching Element is " + searchposition);
+                    Console.WriteLine(searchposition + " found at position " + i + "\n");
+                }
+                else
+                {
+                    Console.WriteLine(searchposition + " Not found");
+                }
+            }
+            return status;
+        }
+
 
 
         public void display()
