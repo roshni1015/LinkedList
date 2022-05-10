@@ -58,10 +58,25 @@ while (true)
             Console.Write("Elements in LinkedList are : ");
             Lvalue4.display();
             Console.WriteLine("\n------------------------------------------------------------------------");
-            Lvalue4.DeleteFirst(56);
+            Lvalue4.DeleteFirst();
             Console.WriteLine("Number of elements in the LinkedList are: {0}", Lvalue4.count);
             Console.Write("Elements in LinkedList are : ");
             Lvalue4.display();
+            Console.WriteLine("\n");
+            break;
+        case 6:
+            CreatingLinkedList<int> Lvalue5 = new();
+            Lvalue5.AddToLast(56);
+            Lvalue5.AddToLast(30);
+            Lvalue5.AddToLast(70);
+            Console.WriteLine("Number of elements in the LinkedList are: {0}", Lvalue5.count);
+            Console.Write("Elements in LinkedList are : ");
+            Lvalue5.display();
+            Console.WriteLine("\n------------------------------------------------------------------------");
+            Lvalue5.DeleteLast();
+            Console.WriteLine("Number of elements in the LinkedList are: {0}", Lvalue5.count);
+            Console.Write("Elements in LinkedList are : ");
+            Lvalue5.display();
             Console.WriteLine("\n");
             break;
         default:

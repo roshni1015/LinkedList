@@ -79,7 +79,7 @@ namespace LinkedList
                 }
             }
         }
-        public void  DeleteFirst(M data)
+        public void  DeleteFirst()
         {
             Node<M> tempnode = head;
             if (head != null)
@@ -90,6 +90,20 @@ namespace LinkedList
             }
             count--;
 
+        }
+        public void DeleteLast()
+        {
+            if (head == null)
+                return;
+
+            if (head.next == null)
+            {
+                return;
+            }
+            Node<M> second_last = head;
+            while (second_last.next.next != null)
+                second_last = second_last.next;
+            second_last.next = null;
         }
 
 
