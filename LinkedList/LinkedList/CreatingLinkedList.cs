@@ -11,6 +11,13 @@ namespace LinkedList
         public int count = 0;
 
         Node<M> head;
+        public void AddToFirst(M data)
+        {
+            Node<M> node = new Node<M>(data);
+            node.next = head;
+            head = node;
+            count++;
+        }
         public void AddToLast(M Value)
         {
             Node<M> temp = new Node<M>(Value);
