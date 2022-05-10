@@ -40,6 +40,46 @@ namespace LinkedList
             }
             count++;
         }
+        public void Insert(M Value, int Position)
+        {
+            Node<M> newNode = new Node<M>(Value);
+            newNode.data = Value;
+            newNode.next = null;
+
+            if (Position < 1)
+            {
+                Console.Write("\nposition should be >= 1.");
+            }
+            else if (Position == 1)
+            {
+                newNode.next = head;
+                head = newNode;
+            }
+            else
+            {
+
+                Node<M> temp = new Node<M>(Value);
+                temp = head;
+                for (int i = 1; i < Position - 1; i++)
+                {
+                    if (temp != null)
+                    {
+                        temp = temp.next;
+                    }
+                }
+
+                if (temp != null)
+                {
+                    newNode.next = temp.next;
+                    temp.next = newNode;
+                }
+                else
+                {
+                    Console.Write("\nThe previous node is null.");
+                }
+            }
+        }
+
 
         public void display()
         {
