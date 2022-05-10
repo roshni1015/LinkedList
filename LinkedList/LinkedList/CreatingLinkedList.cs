@@ -10,7 +10,7 @@ namespace LinkedList
     {
         public int count = 0;
 
-        Node<M> head;
+        public Node<M> head;
         public void AddToFirst(M data)
         {
             Node<M> node = new Node<M>(data);
