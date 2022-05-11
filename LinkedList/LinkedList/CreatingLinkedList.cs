@@ -79,6 +79,35 @@ namespace LinkedList
                 }
             }
         }
+        public void Insert40(int searchvalue, M newValue)
+        {
+            Node<M> temp = head;
+            int found = 0;
+            int i = 0;
+            if (temp != null)
+            {
+                while (temp != null)
+                {
+                    i++;
+                    if (temp.data.Equals(searchvalue))
+                    {
+                        found++;
+                        Node<M> newNode = new Node<M>(newValue);
+                        newNode.data = newValue;
+                        newNode.next = temp.next;
+                        temp.next = newNode;
+                        break;
+
+                    }
+                    temp = temp.next;
+                }
+            }
+            else
+            {
+                Console.WriteLine("The list is empty.");
+            }
+
+        }
         public void  DeleteFirst()
         {
             Node<M> tempnode = head;
@@ -141,10 +170,7 @@ namespace LinkedList
             }
             return status;
         }
-
-
-
-        public void display()
+         public void display()
         {
             Node<M> temp1 = head;
             while (temp1 != null)
