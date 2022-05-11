@@ -4,7 +4,7 @@ using LinkedList;
 Console.WriteLine("Introducing LinkedList!");
 while (true)
 {
-    Console.WriteLine("PLease choose the option :\n1)Creating LinkedList\n2)Adding Node To First Position\n3)Creating LinkedList By Appending\n4)Inserting Value\n5)Delete First value\n6)Delete Last value\n7)Searching value\n8)Inserting New Value\n9)Delete particular value");
+    Console.WriteLine("PLease choose the option :\n1)Creating LinkedList\n2)Adding Node To First Position\n3)Creating LinkedList By Appending\n4)Inserting Value\n5)Delete First value\n6)Delete Last value\n7)Searching value\n8)Inserting New Value\n9)Delete particular value\n10)Creating Ordered Linked List in Ascending Order");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {
@@ -116,6 +116,16 @@ while (true)
             Console.WriteLine("Number of elements in the LinkedList are: {0}", Lvalue8.count);
             Console.Write("Elements in LinkedList are : ");
             Lvalue8.display();
+            Console.WriteLine("\n");
+            break;
+        case 10:
+            CreatingLinkedList<int> Lvalue9 = new();
+            Lvalue9.SortedLinkedList(56);
+            Lvalue9.SortedLinkedList(30);
+            Lvalue9.SortedLinkedList(40);
+            Lvalue9.SortedLinkedList(70);
+            Console.Write("Elements in LinkedList are : ");
+            Lvalue9.display();
             Console.WriteLine("\n");
             break;
         default:

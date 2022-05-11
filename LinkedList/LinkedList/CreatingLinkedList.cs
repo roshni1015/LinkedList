@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LinkedList
 {
-    public class CreatingLinkedList<M>
+    public class CreatingLinkedList<M>where M : IComparable<M>
     {
         public int count = 0;
 
@@ -198,7 +198,32 @@ namespace LinkedList
             }
             return status;
         }
-         public void display()
+        public void SortedLinkedList(M data)
+        {
+            Node<M> temp;
+            Node<M> new_node = new Node<M>(data);
+
+            
+            if (head == null || (head.data.CompareTo(new_node.data) >= 0))
+            {
+                new_node.next = head;
+                head = new_node;
+            }
+            else
+            {
+                temp = head;
+
+                while (temp.next != null && (temp.next.data.CompareTo(new_node.data)) < 0)
+                    temp = temp.next;
+
+                new_node.next = temp.next;
+                temp.next = new_node;
+            }
+        }
+
+           
+            
+        public void display()
         {
             Node<M> temp1 = head;
             while (temp1 != null)
