@@ -14,14 +14,25 @@ namespace LinkedList.Tests
         [TestMethod()]
         public void SearchTest()
         {
-                CreatingLinkedList<int> test = new();
-                test.AddToFirst(70);
-                test.AddToFirst(30);
-                test.AddToFirst(56);
-                test.Search(30);
-                Assert.AreEqual(true, test.Search(30));
+            CreatingLinkedList<int> test = new();
+            test.AddToFirst(70);
+            test.AddToFirst(30);
+            test.AddToFirst(56);
+            test.Search(30);
+            Assert.AreEqual(true, test.Search(30));
 
-           
+
+        }
+
+        [TestMethod()]
+        public void SearchTest1()
+        {
+            CreatingLinkedList<int> Lvalue7 = new();
+            Lvalue7.AddToFirst(56);
+            Lvalue7.AddToFirst(30);
+            Lvalue7.AddToFirst(70);
+            Assert.AreEqual(1, Lvalue7.Insert40(30, 40));
+
         }
     }
 }

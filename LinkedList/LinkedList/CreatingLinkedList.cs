@@ -79,7 +79,7 @@ namespace LinkedList
                 }
             }
         }
-        public void Insert40(int searchvalue, M newValue)
+        public int Insert40(int searchvalue, M newValue)
         {
             Node<M> temp = head;
             int found = 0;
@@ -106,6 +106,7 @@ namespace LinkedList
             {
                 Console.WriteLine("The list is empty.");
             }
+            return found;
 
         }
         public void  DeleteFirst()
