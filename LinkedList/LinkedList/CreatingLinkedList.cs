@@ -135,6 +135,33 @@ namespace LinkedList
                 second_last = second_last.next;
             second_last.next = null;
         }
+        public int Delete40(int searchValue)
+        {
+
+                Node<M> temp = head, previous = null;
+                int found = 0;
+                if (temp != null)
+                {
+                    while (temp != null)
+                    {
+                        if (temp.data.Equals(searchValue))
+                        {
+                            found++;
+                            previous.next = temp.next;
+                            count--;
+                            break;
+                        }
+                        previous = temp;
+                        temp = temp.next;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("The list is empty.");
+                }
+                return found;
+            
+        }
         public bool Search(int searchposition)
         {
             Node<M> temp = head;
